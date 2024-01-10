@@ -1,0 +1,24 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: Cluster
+metadata:
+  name: test
+  namespace: default
+spec:
+  handle: test
+  version: '1.25'
+  providerRef:
+    name: aws
+    namespace: default
+  cloud: aws
+  protect: false
+  cloudSettings:
+    aws:
+      region: eu-west-1
+  nodePools:
+    - name: test
+      instanceType: t3a.large
+      minSize: 1
+      maxSize: 3
+
+
+

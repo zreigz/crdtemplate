@@ -1,0 +1,10 @@
+---
+apiVersion: deployments.plural.sh/v1alpha1
+kind: Provider
+metadata:
+  name: aws
+spec:
+  name: aws
+  namespace: default
+  cloud: aws
+
